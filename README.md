@@ -1,30 +1,55 @@
-# SYNVARA — Intelligent Operational Monitoring & Local Edge AI for Primary Healthcare
+# SYNVARA
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-RUNTIME__REBELS-181717?style=flat&logo=github)](https://github.com/TANVI7722/RUNTIME_REBELS)
-[![Edge AI](https://img.shields.io/badge/Edge%20AI-Isolation%20Forest%20%2B%20FaceNet-0d9488)](https://github.com/TANVI7722/RUNTIME_REBELS)
-[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline%20First-0284c7)](https://github.com/TANVI7722/RUNTIME_REBELS)
-[![IPHS 2022](https://img.shields.io/badge/Compliance-IPHS%202022%20Continuity-16a34a)](https://github.com/TANVI7722/RUNTIME_REBELS)
-[![DPDP Act 2023](https://img.shields.io/badge/Audit-DPDP%20Act%202023%20SHA--256-7c3aed)](https://github.com/TANVI7722/RUNTIME_REBELS)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+### Smart PHC Workforce & Service Availability Intelligence Platform
+> **From attendance data to actionable healthcare operations.**
 
-> **Repository:** [https://github.com/TANVI7722/RUNTIME_REBELS](https://github.com/TANVI7722/RUNTIME_REBELS)  
-> **Developed by:** **Team RUNTIME REBELS**
+[![GitHub Repo](https://img.shields.io/badge/GitHub-RUNTIME__REBELS--181717?style=flat&logo=github)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![Edge AI](https://img.shields.io/badge/Edge%20AI-Isolation%20Forest%20%2B%20FaceNet-0d9488)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline%20First-0284c7)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![IPHS 2022](https://img.shields.io/badge/Compliance-IPHS%202022%20Continuity-16a34a)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![DPDP Act 2023](https://img.shields.io/badge/Audit-DPDP%20Act%202023%20SHA--256-7c3aed)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![Hackathon](https://img.shields.io/badge/Hackathon-HackMatrix-orange)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+[![Problem Statement](https://img.shields.io/badge/Problem%20Statement-HLTH04-blue)](https://github.com/TANVI7722/RUNTIME_REBELS-)
+
+**Repository:** [https://github.com/TANVI7722/RUNTIME_REBELS-](https://github.com/TANVI7722/RUNTIME_REBELS-)  
+**Team:** **RUNTIME REBELS** (PCCOE)  
+**Problem Statement:** HLTH04 — PHC Staffing & Service-Availability Monitoring  
+**Hackathon:** HackMatrix  
 
 ---
 
 ## 📌 Executive Summary
 
-**SYNVARA** is an offline-first Edge AI operational resilience framework engineered for rural Primary Health Centres (PHCs). Peripheral healthcare clinics routinely experience prolonged internet blackouts and erratic power, causing cloud-based attendance and biometric portals to fail. This leads to administrative blindspots, unannounced staff absenteeism, phantom muster roll records, and paralyzed emergency and maternal delivery wards.
+**SYNVARA** is a digital operations intelligence platform designed to help district health administrators and medical officers monitor whether **Primary Health Centres (PHCs) and subcentres are actually capable of delivering their planned healthcare services**.
 
-SYNVARA solves this by migrating biometric authentication, operational anomaly detection, and clinical service contingency directly to the local edge node.
+Instead of treating every missing attendance record as an absence, SYNVARA fuses **staff schedules, on-device biometric attendance, approved leave, service requirements, and edge synchronization status** to identify genuine operational gaps and help administrators resolve them in real time.
 
 ---
 
-## ⚡ Core Pillars & Capabilities
+## 🎯 The Problem
+
+A PHC may have a planned staff roster and a defined set of healthcare services, but district administrators often lack a unified view of whether those services are actually operational.
+
+A missing attendance record could mean:
+* A staff member is genuinely absent.
+* The staff member is on approved field/training leave.
+* The employee arrived late.
+* The PHC has not submitted its report yet.
+* The facility is temporarily offline due to rural power or fiber cuts.
+* The attendance system failed to synchronize.
+
+Treating all of these situations identically creates **false alerts, administrative fatigue, and critical service blindspots**.
+
+### The Key Question SYNVARA Answers:
+> *"Is the clinic actually able to treat patients right now, and if not, who can cover the gap?"*
+
+---
+
+## ⚡ Core Capabilities & Implementation
 
 ### 1. On-Device Edge Face Biometrics & Liveness
-* Complete facial recognition and anti-spoof micro-liveness verification executed on-device.
-* Zero raw biometric templates are leaked across public networks; runs in **< 240ms** local latency.
+* Complete facial recognition and anti-spoof micro-liveness verification running on-device.
+* Zero raw biometric templates are sent to the cloud; sub-240ms verification latency.
 
 ### 2. IPHS 2022 Clinical Service Continuity Engine
 * Real-time monitoring of 4 critical PHC wings:
@@ -32,13 +57,13 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
   2. **Maternity & 24x7 Labour Room**
   3. **General Outpatient (OPD)**
   4. **Pharmacy & Cold-Chain Logistics**
-* If scheduled medical officers are absent or delayed, the engine automatically checks qualifications and prompts pre-approved relief staff from the **IPHS 15% reserve pool**.
+* If scheduled medical officers are delayed or absent, the engine immediately suggests qualified relief staff from the **IPHS 15% reserve pool**.
 
 ### 3. Isolation Forest Anomaly Detection AI
 * Unsupervised machine learning models run on-device to detect proxy attendance, abnormal sign-in times, and anomalous absenteeism clusters.
 
-### 4. Cryptographic Append-Only Audit Ledger
-* Fully compliant with India's **Digital Personal Data Protection Act 2023 (DPDP Act 2023)**.
+### 4. Cryptographic Append-Only Audit Ledger (DPDP Act 2023)
+* Fully compliant with India's **Digital Personal Data Protection Act 2023**.
 * Attendance logs and supervisory modifications are immutably chained using **SHA-256 cryptographic hashes**. Original records can never be overwritten or erased.
 
 ### 5. Opportunistic P2P Mesh & Cloud Synchronization
@@ -46,6 +71,90 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
 
 ### 6. Grassroots Trilingual Interface
 * Native language switcher supporting **English (EN)**, **Marathi (मराठी - MR)**, and **Hindi (हिन्दी - HI)** tailored for rural auxiliary nurses (ANMs) and clinic staff.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                    ┌───────────────────────────┐
+                    │  Rural PHC Hardware Node  │
+                    └─────────────┬─────────────┘
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         ↓                        ↓                        ↓
+  Staff Schedule         On-Device Face Net        IPHS Service Matrix
+  (Doctor/Nurse)         (Haar & Cosine Sim)       (Emergency, Labour)
+         │                        │                        │
+         └────────────────────────┼────────────────────────┘
+                                  ↓
+                     ┌─────────────────────────┐
+                     │ Local Isolation Forest  │
+                     │  Edge Anomaly Detection │
+                     └────────────┬────────────┘
+                                  ↓
+                     ┌─────────────────────────┐
+                     │  Clinical Impact Engine │
+                     │   (IPHS 2022 Continuity)│
+                     └────────────┬────────────┘
+                                  ↓
+                     ┌─────────────────────────┐
+                     │ Append-Only Hash Ledger │
+                     │   (SHA-256 / DPDP 2023) │
+                     └────────────┬────────────┘
+                                  ↓
+                     ┌─────────────────────────┐
+                     │ Opportunistic Mesh Sync │
+                     └────────────┬────────────┘
+                                  ↓
+                    ┌───────────────────────────┐
+                    │ District Fleet Dashboard  │
+                    │    (DHO Fleet Command)    │
+                    └───────────────────────────┘
+```
+
+---
+
+## 🎬 Operational Scenarios
+
+### Scenario 1 — Genuine Emergency Staffing Gap
+```text
+Emergency Doctor expected
+        ↓
+No biometric check-in within grace window
+        ↓
+No sanctioned leave in local database
+        ↓
+IPHS Contingency Alert: "Emergency Room At Risk"
+        ↓
+System recommends Dr. Rahul Mehra (IPHS Relief Pool)
+        ↓
+Medical Officer authorizes coverage with 1-click
+```
+
+### Scenario 2 — Approved Leave Coverage
+```text
+Staff Nurse absent
+        ↓
+Sanctioned leave record confirmed in audit ledger
+        ↓
+Absence classified as SANCTIONED_LEAVE
+        ↓
+No false alarm or penalty triggered
+```
+
+### Scenario 3 — Total Rural Internet Blackout
+```text
+Optical fiber disconnected (Offline Mode)
+        ↓
+Autonomous Edge AI continues on-device face check-ins
+        ↓
+Audit events written to local SQLite ledger
+        ↓
+Internet connectivity restores
+        ↓
+Opportunistic sync pushes verified batch to District Cloud
+```
 
 ---
 
@@ -61,7 +170,7 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
 
 ---
 
-## 🏛️ Multi-Tier Persona Architecture
+## 👥 Multi-Tier Persona Architecture
 
 1. **🩺 Medical Officer (Dr. Rajesh Kulkarni):** In-charge clinical overview, service availability ratios, alert triage, and emergency replacement authorizations.
 2. **👩‍⚕️ PHC Staff Nurse (Nurse Sunita Patil):** Simplified single-purpose view: daily shift hours, instant biometric check-in, and leave entitlement balance.
@@ -74,14 +183,13 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
 
 ### Prerequisites
 * Python 3.10 or higher
-* Node.js & npm *(optional)*
 
 ### Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/TANVI7722/RUNTIME_REBELS.git
-   cd RUNTIME_REBELS
+   git clone https://github.com/TANVI7722/RUNTIME_REBELS-.git
+   cd RUNTIME_REBELS-
    ```
 
 2. **Install Python dependencies:**
@@ -94,7 +202,7 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
    python server.py
    ```
 
-4. **Access the Portal:**
+4. **Access the Portal in your browser:**
    * **Landing Page:** [http://localhost:8000/#landing](http://localhost:8000/#landing)
    * **Login Gateway:** [http://localhost:8000/#login](http://localhost:8000/#login)
    * **Operations Portal:** [http://localhost:8000/#app](http://localhost:8000/#app)
@@ -104,6 +212,8 @@ SYNVARA solves this by migrating biometric authentication, operational anomaly d
 
 ## 👥 Team: RUNTIME REBELS
 
-* **GitHub:** [https://github.com/TANVI7722/RUNTIME_REBELS](https://github.com/TANVI7722/RUNTIME_REBELS)
+* **Repository:** [https://github.com/TANVI7722/RUNTIME_REBELS-](https://github.com/TANVI7722/RUNTIME_REBELS-)
 * **Organization:** PCCOE
-* **Project:** SYNVARA — Intelligent Operational Monitoring for Primary Healthcare
+* **Problem Statement:** HLTH04 — PHC Staffing & Service-Availability Monitoring
+* **Hackathon:** HackMatrix
+* **License:** MIT

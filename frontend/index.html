@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNVARA — Intelligent Operational Monitoring for Primary Healthcare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=synvara_3.0">
+  <link rel="stylesheet" href="css/landing_and_login.css?v=synvara_3.0">
+</head>
+
+<body>
+
+  <!-- ====================================================================
+       PAGE 1: SYNVARA LANDING PAGE
+       Showcases Edge AI, IPHS Clinical Continuity, Face Biometrics, Architecture
+       ==================================================================== -->
+  <div id="landing-view-container" class="page-view active-page">
+    <div class="landing-wrapper">
+      <!-- Ambient Glows -->
+      <div class="landing-ambient-glow glow-teal"></div>
+      <div class="landing-ambient-glow glow-blue"></div>
+      <div class="landing-ambient-glow glow-cyan"></div>
+
+      <!-- Top Navbar -->
+      <header class="landing-navbar">
+        <div class="landing-nav-inner">
+          <div class="landing-brand" onclick="app.navigateToPage('landing')">
+            <div class="landing-brand-logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20"/>
+              </svg>
+            </div>
+            <div class="landing-brand-name">
+              <span>SYNVARA</span>
+              <span class="landing-brand-badge">EDGE AI 3.0</span>
+            </div>
+          </div>
+
+          <ul class="landing-nav-links">
+            <li><a href="#landing-features" data-i18n="nav_features">Features</a></li>
+            <li><a href="#landing-roles" data-i18n="nav_roles">Roles</a></li>
+            <li><a href="#landing-arch" data-i18n="nav_arch">Architecture</a></li>
+            <li><a href="#landing-impact" data-i18n="nav_impact">Impact</a></li>
+          </ul>
+
+          <div class="landing-nav-actions">
+            <!-- Language Selector -->
+            <div class="lang-selector">
+              <button class="lang-btn active" data-lang="en">EN</button>
+              <button class="lang-btn" data-lang="mr">मराठी</button>
+              <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <button class="theme-toggle-btn" onclick="app.toggleDarkMode()" title="Toggle Theme">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+
+            <!-- GitHub Repo Link -->
+            <a href="https://github.com/TANVI7722/RUNTIME_REBELS" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" title="GitHub: TANVI7722/RUNTIME_REBELS" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+
+            <!-- Login CTA -->
+            <button class="btn btn-outline btn-sm" onclick="app.navigateToPage('login')" style="font-weight: 700;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+              <span data-i18n="btn_signin">Sign In</span>
+            </button>
+
+            <!-- Launch App CTA -->
+            <button class="btn btn-primary btn-sm" onclick="app.navigateToPage('app')" style="font-weight: 700;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span data-i18n="btn_portal">Launch Portal</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="landing-hero">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-pill-badge">
+              <span class="pulse-dot"></span>
+              <span>100% OFFLINE-READY • IPHS 2022 CONTINUITY ENGINE</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Intelligent Operational Monitoring & Local <span class="gradient-text">Edge AI</span> for Primary Healthcare
+            </h1>
+
+            <p class="hero-description">
+              Empowering rural Primary Health Centres (PHCs) with autonomous biometric face attendance, real-time clinical service contingency, and offline-first tamper-proof resilience — ensuring lifesaving healthcare continues uninterrupted even through zero-connectivity blackouts.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn-hero-primary" onclick="app.navigateToPage('app')">
+                <span>Launch Operational Portal</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <button class="btn-hero-secondary" onclick="app.navigateToPage('login')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Authorized Sign-In</span>
+              </button>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">
+              <span style="display: flex; align-items: center; gap: 0.35rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                DPDP Act 2023 Compliant
+              </span>
+              <span style="display: flex; align-items: center; gap: 0.35rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero Cloud Lag (&lt; 240ms)
+              </span>
+              <span style="display: flex; align-items: center; gap: 0.35rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                National Health Mission Aligned
+              </span>
+            </div>
+          </div>
+
+          <!-- Hero Telemetry Card -->
+          <div class="hero-telemetry-card">
+            <div class="hero-telemetry-header">
+              <div class="node-title-group">
+                <span class="node-icon-dot"></span>
+                <span class="node-title">NODE: PHC-004 SHIRWAL</span>
+              </div>
+              <span class="node-tag">LOCAL EDGE ACTIVE</span>
+            </div>
+
+            <div class="hero-telemetry-metrics">
+              <div class="hero-metric-tile">
+                <div class="label">Clinical Readiness</div>
+                <div class="val" style="color: var(--success);">100%</div>
+                <div class="sub">4 / 4 Critical Rooms Covered</div>
+              </div>
+              <div class="hero-metric-tile">
+                <div class="label">On-Device Inference</div>
+                <div class="val" style="color: var(--primary);">218ms</div>
+                <div class="sub">Haar + Isolation Forest</div>
+              </div>
+              <div class="hero-metric-tile">
+                <div class="label">Staff On Duty</div>
+                <div class="val">5 / 6</div>
+                <div class="sub">1 Sanctioned Leave (Covered)</div>
+              </div>
+              <div class="hero-metric-tile">
+                <div class="label">Sync Security</div>
+                <div class="val" style="color: var(--secondary);">SHA-256</div>
+                <div class="sub">Immutable Append Ledger</div>
+              </div>
+            </div>
+
+            <div class="hero-radar-box">
+              <div class="hero-radar-line">
+                <span class="tag">EDGE REASONING ENGINE</span>
+                <span class="status-badge">EVAL NORMAL</span>
+              </div>
+              <div style="font-size: 0.72rem; color: #94a3b8; line-height: 1.4;">
+                &gt; Emergency Trauma: DR. RAJESH KULKARNI (PRESENT)<br>
+                &gt; Labour Room: DR. ANANYA SHARMA (PRESENT)<br>
+                &gt; IPHS 15% Reserve Pool: 2 QUALIFIED PHYSICIANS READY<br>
+                &gt; Peer Mesh Sync: 0 PENDING RECONCILIATIONS
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem vs Solution Strip -->
+      <section style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 3rem 1.5rem;">
+        <div style="max-width: 1320px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+            <div style="background: var(--danger-bg); border: 1px solid var(--danger-border); border-radius: var(--radius-md); padding: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--danger-text); font-weight: 800; font-size: 0.95rem; margin-bottom: 0.75rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                THE RURAL HEALTHCARE CRISIS
+              </div>
+              <ul style="font-size: 0.85rem; color: var(--danger-text); display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem;">
+                <li>Frequent rural internet blackouts paralyze cloud-based biometric portals.</li>
+                <li>Unannounced doctor absenteeism leaves emergency &amp; labour rooms paralyzed.</li>
+                <li>Manual muster registers cause widespread proxy sign-ins and delayed audits.</li>
+                <li>District health officers have zero real-time visibility into peripheral clinics.</li>
+              </ul>
+            </div>
+
+            <div style="background: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md); padding: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--success-text); font-weight: 800; font-size: 0.95rem; margin-bottom: 0.75rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                THE SYNVARA RESILIENCE SOLUTION
+              </div>
+              <ul style="font-size: 0.85rem; color: var(--success-text); display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem;">
+                <li>100% on-device face biometric recognition that functions with zero internet.</li>
+                <li>Automated IPHS 2022 contingency engine immediately dispatches reserve staff.</li>
+                <li>Cryptographic SHA-256 tamper-proof ledger ensures DPDP Act 2023 compliance.</li>
+                <li>Opportunistic P2P batch synchronization feeds District Command effortlessly.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="landing-features" class="landing-section">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Enterprise Resilience</span>
+          <h2 class="section-title">Engineered Specifically for Rural Healthcare Challenges</h2>
+          <p class="section-subtitle">Combining lightweight edge neural networks with robust statutory healthcare compliance rules.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-teal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <h3 class="feature-title">On-Device Edge Biometrics</h3>
+            <p class="feature-desc">Offline facial recognition and anti-spoof liveness verification running directly in the browser/node hardware with zero cloud roundtrip latency.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="feature-title">IPHS 2022 Service Continuity</h3>
+            <p class="feature-desc">Automated rules calculate live staff-to-service coverage across Emergency, Maternity, OPD, and Pharmacy, triggering instant contingency workflows.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="feature-title">Isolation Forest Anomaly AI</h3>
+            <p class="feature-desc">Unsupervised machine learning running locally to catch unusual absence clusters, delayed shifts, and biometric proxy risks before clinical operations fail.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Append-Only Audit Ledger</h3>
+            <p class="feature-desc">SHA-256 cryptographically chained events ensure total immutability. No attendance timestamp can ever be modified or erased, adhering to DPDP Act 2023.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-indigo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+            </div>
+            <h3 class="feature-title">Opportunistic Mesh Sync</h3>
+            <p class="feature-desc">Stores all clinical audits safely in local SQLite/IndexedDB. Once connectivity blinks back for even 10 seconds, queued batches synchronize seamlessly.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Grassroots Trilingual UX</h3>
+            <p class="feature-desc">Engineered for real ground staff in English, Marathi (मराठी), and Hindi (हिन्दी) so nurses, ANMs, and doctors can operate fluently without technical hurdles.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Role Explorer -->
+      <section id="landing-roles" class="landing-section" style="padding-top: 0;">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Tailored Experiences</span>
+          <h2 class="section-title">Designed for Every Healthcare Role</h2>
+          <p class="section-subtitle">Click below to preview the interface and responsibilities customized for each tier.</p>
+        </div>
+
+        <div class="role-explorer-container">
+          <div class="role-tabs-bar">
+            <button class="landing-role-tab active" data-landing-role="mo">
+              <span>🩺</span> <span>Medical Officer (MO)</span>
+            </button>
+            <button class="landing-role-tab" data-landing-role="staff">
+              <span>👩‍⚕️</span> <span>Staff Nurse &amp; ANM</span>
+            </button>
+            <button class="landing-role-tab" data-landing-role="dho">
+              <span>🏛️</span> <span>District Health Officer (DHO)</span>
+            </button>
+            <button class="landing-role-tab" data-landing-role="admin">
+              <span>💻</span> <span>System Administrator</span>
+            </button>
+          </div>
+
+          <div class="role-preview-grid">
+            <div class="role-preview-info">
+              <h3 id="landing-role-title">Medical Officer (MO)</h3>
+              <div class="role-tagline" id="landing-role-tagline">Facility Command &amp; Clinical Service Continuity</div>
+              <p id="landing-role-desc">
+                Autonomous situational awareness for the in-charge physician. Instantly detects absent trauma staff, reassigns qualified relief doctors, and guarantees IPHS 2022 service standards.
+              </p>
+              <ul class="role-feature-bullets" id="landing-role-bullets">
+                <li>
+                  <span class="bullet-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Real-time 4-service readiness matrix (Emergency, Labour, OPD, Pharmacy)</span>
+                </li>
+                <li>
+                  <span class="bullet-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>1-click sanctioned overtime &amp; emergency relief coverage authorization</span>
+                </li>
+                <li>
+                  <span class="bullet-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Edge AI anomaly radar identifying attendance proxies and surge delays</span>
+                </li>
+              </ul>
+
+              <button class="btn btn-primary" id="btn-landing-role-login" onclick="app.login('mo')">
+                Sign In as Medical Officer
+              </button>
+            </div>
+
+            <div class="role-preview-card">
+              <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <div style="font-weight: 700; font-size: 0.82rem; color: var(--text-main);">LIVE OPERATIONAL SUMMARY</div>
+                <span class="badge-status present"><span class="status-dot-sm"></span> ONLINE</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="background: var(--bg-surface); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-body);">Emergency Wing:</span>
+                  <span style="font-size: 0.78rem; font-weight: 700; color: var(--success-text); background: var(--success-bg); padding: 2px 8px; border-radius: 4px;">ACTIVE (Dr. Rajesh)</span>
+                </div>
+                <div style="background: var(--bg-surface); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-body);">Labour Room:</span>
+                  <span style="font-size: 0.78rem; font-weight: 700; color: var(--success-text); background: var(--success-bg); padding: 2px 8px; border-radius: 4px;">ACTIVE (Dr. Ananya)</span>
+                </div>
+                <div style="background: var(--bg-surface); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-body);">Reserve Staff Pool:</span>
+                  <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">2 IPHS RESERVES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture Pipeline -->
+      <section id="landing-arch" class="landing-section" style="padding-top: 0;">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Local Edge Pipeline</span>
+          <h2 class="section-title">From Physical Kiosk to District Command</h2>
+          <p class="section-subtitle">How data flows safely with zero data leakage and cryptographic tamper resistance.</p>
+        </div>
+
+        <div class="arch-pipeline-container">
+          <div class="arch-node-box">
+            <span class="arch-node-step">STEP 01</span>
+            <div class="arch-node-title">Biometric Kiosk</div>
+            <div class="arch-node-desc">On-device camera captures frame, checks 3D texture &amp; micro-liveness.</div>
+          </div>
+          <div class="arch-node-box">
+            <span class="arch-node-step">STEP 02</span>
+            <div class="arch-node-title">Local Edge Net</div>
+            <div class="arch-node-desc">Haar cascade + FaceNet cosine matching in &lt; 250ms with zero cloud lag.</div>
+          </div>
+          <div class="arch-node-box">
+            <span class="arch-node-step">STEP 03</span>
+            <div class="arch-node-title">Immutable Ledger</div>
+            <div class="arch-node-desc">Appends SHA-256 hashed event into local encrypted SQLite database.</div>
+          </div>
+          <div class="arch-node-box">
+            <span class="arch-node-step">STEP 04</span>
+            <div class="arch-node-title">IPHS Rule AI</div>
+            <div class="arch-node-desc">Continuity evaluator instantly recalculates 4 clinical department matrices.</div>
+          </div>
+          <div class="arch-node-box">
+            <span class="arch-node-step">STEP 05</span>
+            <div class="arch-node-title">District Sync</div>
+            <div class="arch-node-desc">Opportunistic P2P batch sync updates DHO fleet surveillance automatically.</div>
+          </div>
+        </div>
+
+        <!-- Impact Statistics Banner -->
+        <div id="landing-impact" class="stats-banner">
+          <div class="stat-item">
+            <div class="stat-num">87%</div>
+            <div class="stat-label">Faster Emergency Roster Rebalancing</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">0 ms</div>
+            <div class="stat-label">Cloud Dependency Latency</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Offline Autonomous Continuity</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">IPHS</div>
+            <div class="stat-label">Full 2022 Staff Norm Compliance</div>
+          </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="landing-cta-box">
+          <h2>Experience Resilient Healthcare Operations</h2>
+          <p>Deploy local intelligence to eliminate administrative blindspots and protect patient lives at the last mile.</p>
+          <div class="landing-cta-actions">
+            <button class="btn-cta-white" onclick="app.navigateToPage('app')">
+              Launch Live Operational Portal
+            </button>
+            <button class="btn-cta-ghost" onclick="app.navigateToPage('login')">
+              Authorized Personnel Sign-In
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="landing-footer">
+        <div class="footer-inner">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="landing-brand-logo" style="width: 32px; height: 32px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.95rem;">SYNVARA Edge Operational Framework</strong>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">Pune Rural Health Circle • National Health Mission (NHM) Maharashtra</div>
+            </div>
+          </div>
+
+          <div class="footer-compliance-badges">
+            <span class="comp-badge">DPDP Act 2023 Audited</span>
+            <span class="comp-badge">IPHS 2022 Continuity Matrix</span>
+            <span class="comp-badge">ABDM Architecture Compatible</span>
+            <span class="comp-badge">v3.0.4-Edge</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.78rem;">
+            <span style="color: var(--text-muted);">Team: <strong>RUNTIME REBELS</strong></span>
+            <a href="https://github.com/TANVI7722/RUNTIME_REBELS" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; color: var(--primary); text-decoration: none; font-weight: 700; background: var(--primary-light); padding: 4px 10px; border-radius: var(--radius-pill); border: 1px solid var(--primary-border);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>RUNTIME_REBELS</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       PAGE 2: SYNVARA SECURE LOGIN PORTAL
+       Multi-Tier Authentication, One-Click Demo Personas & Biometric Face Net
+       ==================================================================== -->
+  <div id="login-view-container" class="page-view" style="display: none;">
+    <div class="login-wrapper">
+      <!-- Ambient Glows -->
+      <div class="landing-ambient-glow glow-teal"></div>
+      <div class="landing-ambient-glow glow-blue"></div>
+
+      <!-- Top Return Bar -->
+      <div class="login-topbar">
+        <button class="btn-back-home" onclick="app.navigateToPage('landing')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span data-i18n="btn_home">Back to Overview</span>
+        </button>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <!-- Language Selector -->
+          <div class="lang-selector">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="mr">मराठी</button>
+            <button class="lang-btn" data-lang="hi">हिन्दी</button>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="theme-toggle-btn" onclick="app.toggleDarkMode()" title="Toggle Theme">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- GitHub Repo Link -->
+          <a href="https://github.com/TANVI7722/RUNTIME_REBELS" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" title="GitHub: TANVI7722/RUNTIME_REBELS" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; justify-content: center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="login-card-container">
+        <div class="login-glass-card">
+          <div class="login-header">
+            <div class="login-emblem">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20"/>
+              </svg>
+            </div>
+            <h2 class="login-title">SYNVARA Gateway</h2>
+            <div class="login-subtitle">Primary Healthcare Edge Operational Terminal</div>
+            <div class="login-node-pill">
+              <span class="status-dot green"></span>
+              <span>NODE: PHC-004 SHIRWAL (ACTIVE)</span>
+            </div>
+          </div>
+
+          <!-- Facility Selector -->
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase;">Facility &amp; Node Access:</label>
+            <select class="form-control" id="login-facility-select">
+              <option value="PHC-004">PHC-004 Shirwal (Primary Local Node • Online)</option>
+              <option value="PHC-002">PHC-002 Bhor (Satellite Node • Online)</option>
+              <option value="PHC-007">PHC-007 Velhe (Tribal Node • Offline Resilient)</option>
+              <option value="DHO-PUNE">District Health Command Center (Pune HQ)</option>
+            </select>
+          </div>
+
+          <!-- Auth Mode Navigation (Password vs Biometric) -->
+          <div class="login-method-nav">
+            <button class="login-tab-btn active" data-method="password">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>Credentials</span>
+            </button>
+            <button class="login-tab-btn" data-method="biometric">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <span>Biometric Face Net</span>
+            </button>
+          </div>
+
+          <!-- Standard Credentials Form -->
+          <div id="login-method-password">
+            <form id="auth-login-form">
+              <div class="form-group">
+                <label>Staff Health ID / ABHA ID / Email:</label>
+                <input type="text" id="login-user-id" class="form-control" placeholder="e.g. STF-001 or dr.kulkarni@phc.gov.in" value="STF-001 (Dr. Rajesh Kulkarni)">
+              </div>
+
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <label>Password / Pin:</label>
+                  <span style="font-size: 0.72rem; color: var(--primary); cursor: pointer;" onclick="app.showToast('Demo Terminal: any password accepted for verification.', 'info')">Forgot?</span>
+                </div>
+                <input type="password" id="login-password" class="form-control" value="••••••••••••" placeholder="Enter secure password">
+              </div>
+
+              <div class="form-group">
+                <label>Operational Role Clearance:</label>
+                <select id="login-role-select" class="form-control">
+                  <option value="mo">Medical Officer (MO) — Dr. Rajesh Kulkarni</option>
+                  <option value="staff">PHC Staff Nurse — Nurse Sunita Patil</option>
+                  <option value="dho">District Health Officer (DHO) — Dr. V. G. Shinde</option>
+                  <option value="admin">System Administrator — Admin S. Pawar</option>
+                </select>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; font-size: 0.78rem;">
+                <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; color: var(--text-body);">
+                  <input type="checkbox" checked style="accent-color: var(--primary);">
+                  <span>Remember on this edge node</span>
+                </label>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.72rem;">Encrypted SQLite Cache</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" style="width: 100%; padding: 0.75rem; font-size: 0.95rem; font-weight: 700;">
+                Sign In to Operations
+              </button>
+            </form>
+          </div>
+
+          <!-- Biometric Face Authentication Panel -->
+          <div id="login-method-biometric" style="display: none;" class="bio-login-panel">
+            <div class="bio-target-box">
+              <div class="bio-scanner-laser" id="bio-login-laser"></div>
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(13, 148, 136, 0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <div class="bio-status-text" id="bio-login-status">
+              Edge Face Net Ready. Position face towards on-device camera.
+            </div>
+            <button class="btn btn-primary" id="btn-start-bio-login" style="width: 100%; font-weight: 700;">
+              Verify Face &amp; Enter Portal
+            </button>
+          </div>
+
+          <!-- Quick One-Click Demo Personas -->
+          <div class="quick-login-section">
+            <div class="quick-login-label">
+              <span>Quick Demo Access (1-Click)</span>
+              <span style="font-size: 0.68rem; color: var(--primary); font-family: var(--font-mono);">PRE-AUTHENTICATED</span>
+            </div>
+
+            <div class="quick-roles-grid">
+              <button class="btn-quick-persona" data-persona-role="mo" data-persona-name="Dr. Rajesh Kulkarni">
+                <span class="persona-badge persona-mo">MO</span>
+                <div class="persona-text">
+                  <div class="persona-name">Dr. Rajesh K.</div>
+                  <div class="persona-role">Medical Officer</div>
+                </div>
+              </button>
+
+              <button class="btn-quick-persona" data-persona-role="staff" data-persona-name="Nurse Sunita Patil">
+                <span class="persona-badge persona-staff">ST</span>
+                <div class="persona-text">
+                  <div class="persona-name">Nurse Sunita P.</div>
+                  <div class="persona-role">Staff Nurse</div>
+                </div>
+              </button>
+
+              <button class="btn-quick-persona" data-persona-role="dho" data-persona-name="Dr. V. G. Shinde">
+                <span class="persona-badge persona-dho">DH</span>
+                <div class="persona-text">
+                  <div class="persona-name">Dr. V. G. Shinde</div>
+                  <div class="persona-role">District Officer</div>
+                </div>
+              </button>
+
+              <button class="btn-quick-persona" data-persona-role="admin" data-persona-name="Admin S. Pawar">
+                <span class="persona-badge persona-admin">AD</span>
+                <div class="persona-text">
+                  <div class="persona-name">Admin S. Pawar</div>
+                  <div class="persona-role">System Admin</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem; text-align: center; font-size: 0.72rem; color: var(--text-dim); line-height: 1.4;">
+            Protected under DPDP Act 2023. Biometric templates encrypted on-device. Zero unhashed biometrics sent across network.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       PAGE 3: MAIN OPERATIONAL CLINICAL PORTAL
+       (Wrapped for seamless SPA navigation)
+       ==================================================================== -->
+  <div id="app-view-container" class="page-view" style="display: none;">
+
+    <!-- Top App Header -->
+    <header class="app-header">
+      <div class="header-inner">
+
+        <!-- Left: Logo & Brand -->
+        <div class="brand-section">
+          <div class="brand-symbol">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <div class="brand-info">
+            <div class="brand-headline">
+              <span class="brand-title" data-i18n="project_name">SYNVARA</span>
+            </div>
+            <div class="brand-tagline" data-i18n="project_tagline">
+              Intelligent Operational Monitoring for Primary Healthcare
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle: Role Switcher (Role 1: Staff, Role 2: MO, Role 3: DHO, Role 4: Admin) -->
+        <div class="role-switcher-container">
+          <button class="role-btn active" data-role="mo" onclick="app.switchRole('mo')">
+            <span class="role-indicator">MO</span> <span data-i18n="role_mo">Medical Officer</span>
+          </button>
+          <button class="role-btn" data-role="staff" onclick="app.switchRole('staff')">
+            <span class="role-indicator">ST</span> <span data-i18n="role_staff">PHC Staff</span>
+          </button>
+          <button class="role-btn" data-role="dho" onclick="app.switchRole('dho')">
+            <span class="role-indicator">DH</span> <span data-i18n="role_dho">District Officer</span>
+          </button>
+          <button class="role-btn" data-role="admin" onclick="app.switchRole('admin')">
+            <span class="role-indicator">AD</span> <span data-i18n="role_admin">System Admin</span>
+          </button>
+        </div>
+
+        <!-- Right: Network, Alerts, Language, Theme, Profile -->
+        <div class="header-actions">
+          <!-- Network Connectivity Status Indicator (Compact) -->
+          <div id="network-status-pill" class="network-pill online" onclick="app.toggleConnectivity()"
+            title="Click to toggle Online/Offline simulation">
+            <span class="status-dot green" id="network-status-dot"></span>
+            <span id="network-status-text" data-i18n="online">Online</span>
+            <span id="pending-sync-badge" style="font-size: 0.68rem; opacity: 0.85; margin-left: 2px;">(0)</span>
+          </div>
+
+          <!-- Language Selector (EN | मराठी | हिन्दी) -->
+          <div class="lang-selector">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="mr">मराठी</button>
+            <button class="lang-btn" data-lang="hi">हिन्दी</button>
+          </div>
+
+          <!-- Dark / Light Mode Toggle -->
+          <button id="btn-theme-toggle" class="theme-toggle-btn" onclick="app.toggleDarkMode()"
+            title="Toggle Dark/Light Mode">
+            <svg id="theme-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Home Button -->
+          <button class="btn-header-home" onclick="app.navigateToPage('landing')" title="Landing Page">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span data-i18n="btn_home">Home</span>
+          </button>
+
+          <!-- User Profile Pill -->
+          <div class="user-profile-badge">
+            <span class="user-avatar-initials" id="header-user-avatar">MO</span>
+            <span id="header-user-name">Dr. Rajesh Kulkarni</span>
+          </div>
+
+          <!-- Sign Out Button -->
+          <button class="btn-header-logout" onclick="app.logout()" title="Sign Out">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span data-i18n="btn_signout">Sign Out</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+  <!-- Minimal Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-tabs">
+        <button class="nav-tab-btn active" data-tab="dashboard">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          <span data-i18n="tab_dashboard">Dashboard</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="attendance">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span data-i18n="tab_attendance">Attendance</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="staff">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span data-i18n="tab_staff">Staff &amp; Schedule</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="services">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span data-i18n="tab_services">Services</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="alerts">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span data-i18n="tab_alerts">Alerts</span>
+          <span class="nav-counter-pill" id="nav-alerts-pill">3</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="leave">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span data-i18n="tab_leave">Leave</span>
+        </button>
+        <!-- Authorized Pages -->
+        <button class="nav-tab-btn" data-tab="analytics" id="nav-tab-analytics">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span data-i18n="tab_analytics">Analytics</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="district" id="nav-tab-district" style="display: none;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path></svg>
+          <span data-i18n="tab_district">District Fleet</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="settings" id="nav-tab-settings" style="display: none;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span data-i18n="tab_settings">Settings</span>
+        </button>
+      </div>
+
+      <div class="nav-context-info">
+        <span id="system-clock">09:00:00</span> • <span id="node-id-label">Node: PHC-004</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offline Banner (Visible only when internet is disconnected) -->
+  <div id="offline-banner"
+    style="display: none; background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 0.6rem 1.5rem; font-size: 0.78rem; color: #92400e;">
+    <div style="max-width: 1560px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <div>
+        <strong data-i18n="offline_banner_title">OFFLINE AUTONOMOUS MODE ACTIVE:</strong>
+        <span data-i18n="offline_banner_desc">
+          Internet disconnected. Clinic operations, Edge AI, and staff attendance continue running locally on this
+          device.
+        </span>
+      </div>
+      <span style="font-weight: 700; background: rgba(0,0,0,0.06); padding: 2px 8px; border-radius: 4px;"
+        data-i18n="zero_cloud">
+        Zero Cloud Dependency
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- ====================================================================
+         VIEW 1: DASHBOARD
+         Dynamically adjusts for Medical Officer vs Staff vs DHO vs Admin
+         ==================================================================== -->
+    <div id="view-dashboard" class="tab-view active">
+
+      <!-- ==========================================
+           ROLE 1: PHC STAFF VIEW (VERY SIMPLE)
+           ========================================== -->
+      <div id="role-view-staff" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">My Shift & Daily Workplace</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Welcome, Nurse Sunita Patil. Here is your current
+            clinical assignment.</p>
+        </div>
+
+        <div class="staff-dashboard-container">
+          <div class="staff-kpi-tile">
+            <span class="label">Today's Shift</span>
+            <span class="val">09:00 – 17:00</span>
+            <span class="sub">Emergency & Trauma Care • Morning Roster</span>
+          </div>
+
+          <div class="staff-kpi-tile">
+            <span class="label">Attendance Status</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 4px;">
+              <span class="badge-status present"><span class="status-dot-sm"></span> Checked In at 08:52</span>
+              <button class="btn btn-outline btn-sm" onclick="app.switchTab('attendance')">Face Kiosk</button>
+            </div>
+            <span class="sub">Verified via On-Device Face Net (100% Offline)</span>
+          </div>
+
+          <div class="staff-kpi-tile">
+            <span class="label">Current Service Assignment</span>
+            <span class="val" style="color: var(--primary);">Emergency Room (Lead Nurse)</span>
+            <span class="sub">Covering trauma stabilization with Dr. Rajesh Kulkarni</span>
+          </div>
+
+          <div class="staff-kpi-tile">
+            <span class="label">Leave Status</span>
+            <span class="val">14 Days Available</span>
+            <span class="sub">0 pending requests • IPHS Reserve Qualified</span>
+          </div>
+        </div>
+
+        <!-- Quick Staff Action Bar -->
+        <div class="card" style="margin-top: 1.5rem;">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Staff Quick Actions</div>
+              <div class="card-subtitle">Common tasks for healthcare workers</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="app.switchTab('attendance')">
+              Record Biometric Check-In
+            </button>
+            <button class="btn btn-outline" onclick="app.switchTab('leave')">
+              Request Sanctioned Leave
+            </button>
+            <button class="btn btn-outline" onclick="app.switchTab('services')">
+              View Room Status
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           ROLE 2: PRIMARY MEDICAL OFFICER DASHBOARD
+           ========================================== -->
+      <div id="role-view-mo">
+
+        <!-- Top Summary Strip (EXACTLY 4 COMPACT CARDS ONLY) -->
+        <section class="top-summary-strip">
+          <!-- 1. SERVICES AVAILABLE -->
+          <div class="summary-card" onclick="app.switchTab('services')">
+            <div class="summary-icon-box green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label" data-i18n="summary_services">Services Available</div>
+              <div class="summary-val" id="sum-services-available" style="color: var(--success);">4 / 4</div>
+              <div class="summary-subtext">All Critical Rooms Active</div>
+            </div>
+          </div>
+
+          <!-- 2. STAFF PRESENT -->
+          <div class="summary-card" onclick="app.switchTab('staff')">
+            <div class="summary-icon-box teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label" data-i18n="summary_staff">Staff Present</div>
+              <div class="summary-val" id="sum-staff-present" style="color: var(--primary);">5 / 6</div>
+              <div class="summary-subtext">Morning Duty Coverage</div>
+            </div>
+          </div>
+
+          <!-- 3. ACTIVE ALERTS -->
+          <div class="summary-card" onclick="app.switchTab('alerts')">
+            <div class="summary-icon-box amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label" data-i18n="summary_alerts">Active Alerts</div>
+              <div class="summary-val" id="sum-active-alerts" style="color: var(--warning);">3</div>
+              <div class="summary-subtext">Actionable Staffing Notices</div>
+            </div>
+          </div>
+
+          <!-- 4. CRITICAL ISSUES -->
+          <div class="summary-card" onclick="app.switchTab('alerts')">
+            <div class="summary-icon-box red">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label" data-i18n="summary_critical">Critical Issues</div>
+              <div class="summary-val" id="sum-critical-issues" style="color: var(--danger);">1</div>
+              <div class="summary-subtext">Requires MO Action</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Medical Officer Two-Column Layout -->
+        <div class="mo-dashboard-grid">
+
+          <!-- Left Column: Services, Staff Table & Compact Edge AI -->
+          <div>
+
+            <!-- SECTION: Service Availability -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">
+                    <span data-i18n="services_title">Service Availability</span>
+                  </div>
+                  <div class="card-subtitle" data-i18n="services_subtitle">
+                    Key PHC Services & Staffing Requirements
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="app.switchTab('services')">View All Services</button>
+              </div>
+
+              <div id="services-compact-grid" class="services-compact-grid">
+                <!-- Dynamically populated by app.js -->
+              </div>
+            </div>
+
+            <!-- SECTION: Today's Staff Roster -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">
+                    <span data-i18n="staff_title">Today's Staff Roster</span>
+                  </div>
+                  <div class="card-subtitle" data-i18n="staff_subtitle">
+                    Attendance, Active Shift & Assigned Service
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="app.switchTab('staff')" data-i18n="btn_view_all_staff">
+                  View All Staff
+                </button>
+              </div>
+
+              <div class="table-wrapper">
+                <table class="opsense-table">
+                  <thead>
+                    <tr>
+                      <th>Staff Name</th>
+                      <th>Role</th>
+                      <th>Attendance</th>
+                      <th>Assigned Service</th>
+                      <th style="text-align: right;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="today-staff-table-body">
+                    <!-- Dynamically populated by app.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- SECTION: Compact Edge AI Anomaly Risk (Useful, Not Decorative) -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">
+                    <span data-i18n="edge_ai_title">Operational Anomaly Risk</span>
+                  </div>
+                  <div class="card-subtitle" data-i18n="edge_ai_subtitle">
+                    Edge AI Multivariate Anomaly Detection (100% Local Inference)
+                  </div>
+                </div>
+                <span id="edge-ai-risk-pill" class="badge-status present">NORMAL (0.18)</span>
+              </div>
+
+              <div class="edge-ai-compact-box">
+                <div class="edge-score-header">
+                  <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Current Risk
+                    Assessment</span>
+                  <span class="edge-score-badge low" id="edge-score-badge-val">LOW RISK</span>
+                </div>
+                <ul class="edge-reasons-list" id="edge-reasons-list">
+                  <li>Emergency coverage staffed at minimum safety threshold</li>
+                  <li>1 sanctioned training leave active (covered by IPHS reserve)</li>
+                  <li>0 unexpected service interruptions detected in last 24h</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Active Operational Alerts -->
+          <div>
+            <div class="card" style="position: sticky; top: 80px;">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">
+                    <span data-i18n="alerts_title">Active Operational Alerts</span>
+                  </div>
+                  <div class="card-subtitle" data-i18n="alerts_subtitle">
+                    Actionable Operational Alerts Requiring Attention
+                  </div>
+                </div>
+                <span class="badge-status late" id="active-alerts-count-badge">3 Attention Required</span>
+              </div>
+
+              <div id="alerts-feed-container" class="alerts-feed-container">
+                <!-- Dynamically populated with What? Why? Impact? Action? by app.js -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           ROLE 3: DISTRICT HEALTH OFFICER VIEW
+           ========================================== -->
+      <div id="role-view-dho" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">District Multi-PHC Operational
+            Fleet</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Pune Rural Health Circle • Monitoring 4 Sub-District
+            Primary Health Centres</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem;"
+          id="district-facilities-grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- ==========================================
+           ROLE 4: SYSTEM ADMIN VIEW
+           ========================================== -->
+      <div id="role-view-admin" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">System Administration & Audit
+            Ledger</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Manage facility parameters, offline database, and
+            cryptographic audit records.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Facility Configuration & Edge Nodes</div>
+              <div class="card-subtitle">Node parameters for PHC-004 Shirwal</div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.82rem;">
+            <div><strong>Facility Code:</strong> PHC-004</div>
+            <div><strong>Geofence Radius:</strong> 150m (Latitude: 18.1524, Longitude: 73.9821)</div>
+            <div><strong>Biometric Devices:</strong> EDGE-CAM-PHC004-A (Online)</div>
+            <div><strong>Storage Engine:</strong> IndexedDB (Offline Autonomous)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ====================================================================
+         VIEW 2: ATTENDANCE & BIOMETRIC FACE STATION
+         ==================================================================== -->
+    <div id="view-attendance" class="tab-view">
+
+      <!-- Station Sub-Mode Switcher -->
+      <div class="station-subnav">
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button id="btn-face-mode-checkin" class="btn btn-primary" onclick="app.switchFaceMode('checkin')">
+            Daily Attendance Check-In
+          </button>
+          <button id="btn-face-mode-enroll" class="btn btn-outline" onclick="app.switchFaceMode('enrollment')">
+            Step 1-5: Face Registration & OpenCV Embedding
+            <span id="badge-unenrolled-count"
+              style="background: var(--danger-bg); color: var(--danger-text); font-size: 0.68rem; padding: 1px 7px; border-radius: 12px; margin-left: 4px; font-weight: 700;">2
+              Pending</span>
+          </button>
+        </div>
+
+        <div style="font-size: 0.76rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span style="color: var(--primary); font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 2px 8px; border-radius: 4px;">OpenCV Detection</span>
+          <span>•</span>
+          <span style="color: var(--success); font-weight: 700; background: rgba(34, 197, 94, 0.1); padding: 2px 8px; border-radius: 4px;">ArcFace 512-D</span>
+          <span>•</span>
+          <span style="color: var(--warning); font-weight: 700;">100% Offline Edge</span>
+        </div>
+      </div>
+
+      <!-- Mode 1: Daily Check-In -->
+      <div id="face-mode-checkin-panel">
+        <div class="face-kiosk-layout">
+
+          <!-- Left: Camera Viewport -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Edge Face Scanner Viewport</div>
+                <div class="card-subtitle">On-device biometric face verification & anti-proxy detection</div>
+              </div>
+              <span id="camera-enrolled-badge" class="badge-status present"><span class="status-dot-sm"></span> Profile Enrolled</span>
+            </div>
+
+            <div class="camera-feed-box" id="camera-viewport-box">
+              <video id="webcam-video" class="camera-feed-video" autoplay playsinline muted
+                style="display: none;"></video>
+              <canvas id="camera-canvas" class="camera-canvas-overlay"></canvas>
+
+              <div id="scanner-simulation-graphic" style="text-align: center; z-index: 2;">
+                <div id="scanner-avatar-display" style="margin-bottom: 0.4rem;"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                <div id="scanner-avatar-name" style="font-size: 1.15rem; font-weight: 800; color: #ffffff;">Dr. Rajesh
+                  Kulkarni</div>
+                <div id="scanner-avatar-role"
+                  style="font-size: 0.78rem; color: #94a3b8; font-family: var(--font-mono);">Medical Officer • Emergency
+                  & Trauma Care</div>
+              </div>
+
+              <div id="face-hud-reticle" class="face-hud-reticle"></div>
+              <div id="scan-laser-line" class="scan-laser-line"></div>
+
+              <div class="hud-top-telemetry">
+                <span>DEVICE: <strong id="hud-device-id">EDGE-CAM-PHC004-A</strong></span>
+                <span>GEOFENCE: <strong style="color: #4ade80;">INSIDE (18.5m)</strong></span>
+              </div>
+
+              <div class="hud-bottom-telemetry" id="hud-status-text">
+                Position face within reticle and click Record Check-In
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; margin-top: 1rem; flex-wrap: wrap;">
+              <button id="btn-toggle-webcam" class="btn btn-outline btn-sm">Use WebCam Camera</button>
+              <button id="btn-trigger-scan" class="btn btn-primary" style="flex: 1;" data-i18n="btn_record_checkin">
+                Record Biometric Check-In
+              </button>
+              <button id="btn-camera-recognize" class="btn btn-secondary btn-sm" onclick="app.recognizeFromLiveCamera()">
+                Step 6: Live 1:N Recognize
+              </button>
+              <button id="btn-manual-fallback" class="btn btn-outline btn-sm">Supervisor Fallback</button>
+            </div>
+          </div>
+
+          <!-- Right: Identity Selection & Security Tests -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">Staff Verification Details</div>
+                  <div class="card-subtitle">Select staff account and test anti-proxy fraud safeguards</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Select Staff Member Checking In:</label>
+                <select id="face-staff-select" class="form-control">
+                  <!-- Populated by app.js -->
+                </select>
+              </div>
+
+              <!-- Unregistered Warning Banner -->
+              <div id="face-not-enrolled-banner"
+                style="display: none; background: var(--warning-bg); border: 1px solid var(--warning-border); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 0.85rem;">
+                <div style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                  <span style="font-weight: 700; color: var(--warning); font-size: 0.85rem;">[Notice]</span>
+                  <div>
+                    <strong style="color: var(--warning-text); font-size: 0.84rem;">Face Registration Required
+                      First</strong>
+                    <div style="font-size: 0.76rem; color: var(--warning-text); margin-top: 0.2rem; line-height: 1.4;">
+                      <span id="unenrolled-staff-name-text">This staff member</span> has not registered their face
+                      biometric yet. One-time enrollment is mandatory.
+                    </div>
+                    <button class="btn btn-warning btn-sm" style="margin-top: 0.5rem;"
+                      onclick="app.quickOpenEnrollmentForCurrentStaff()">
+                      Register Face Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Anti-Proxy Test Selector -->
+              <div class="form-group">
+                <label style="display: flex; justify-content: space-between;">
+                  <span>Face in Front of Camera (Anti-Proxy Test):</span>
+                  <span style="color: var(--text-dim); font-size: 0.72rem;">Camera vs Account Claim</span>
+                </label>
+                <select id="face-detected-person" class="form-control">
+                  <option value="SELF">Genuine Face (Matches Selected Staff)</option>
+                  <option value="STF-002">Proxy Attempt: Nurse Sunita Patil (STF-002)</option>
+                  <option value="STF-005">Proxy Attempt: Dr. Vikram Deshmukh (STF-005)</option>
+                  <option value="STRANGER">Unregistered Stranger / Imposter</option>
+                </select>
+              </div>
+
+              <!-- Checkbox quick toggle -->
+              <div
+                style="background: var(--bg-surface-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.75rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                  <strong style="font-size: 0.8rem; color: var(--text-main);">Quick Proxy Fraud Simulation
+                    Toggle</strong>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Simulate camera mismatch with claimed
+                    account.</div>
+                </div>
+                <input type="checkbox" id="check-simulate-proxy" style="transform: scale(1.25); cursor: pointer;">
+              </div>
+
+              <!-- Telemetry Result Box -->
+              <div id="face-result-box"
+                style="background: var(--bg-surface-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+                <div
+                  style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700; margin-bottom: 0.4rem;">
+                  Verification Result:
+                </div>
+                <div id="face-result-headline" style="font-size: 1.05rem; font-weight: 800; color: var(--success);">
+                  Ready for check-in
+                </div>
+                <div id="face-result-details"
+                  style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.45;">
+                  Select staff member and click "Record Biometric Check-In".
+                </div>
+                <div id="face-result-telemetry-row"
+                  style="display: flex; gap: 1rem; margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-dim); flex-wrap: wrap;">
+                  <span>Match: <strong id="res-match-pct" style="color: var(--primary);">--</strong></span>
+                  <span>Liveness: <strong id="res-liveness-val" style="color: var(--success);">--</strong></span>
+                  <span>Proxy Risk: <strong id="res-proxy-risk" style="color: var(--warning);">--</strong></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mode 2: Face Registration & Anti-Duplication -->
+      <div id="face-mode-enrollment-panel" style="display: none;">
+        <div class="face-kiosk-layout">
+
+          <!-- Left: Registration Studio -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Face Enrollment Studio</div>
+                <div class="card-subtitle">One-time registration with 1:N collision check</div>
+              </div>
+              <span class="badge-status present">ENROLLMENT STUDIO</span>
+            </div>
+
+            <div class="camera-feed-box" id="enroll-viewport-box">
+              <div id="enroll-simulation-graphic" style="text-align: center; z-index: 2;">
+                <div id="enroll-avatar-display" style="margin-bottom: 0.4rem;"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                <div id="enroll-avatar-name" style="font-size: 1.15rem; font-weight: 800; color: #ffffff;">Dr. Sameer
+                  Patil</div>
+                <div id="enroll-avatar-status"
+                  style="font-size: 0.78rem; color: #f59e0b; font-family: var(--font-mono);">Pending Initial Face
+                  Registration</div>
+              </div>
+
+              <div id="enroll-hud-reticle" class="face-hud-reticle" style="border-color: #38bdf8;"></div>
+
+              <div class="hud-top-telemetry">
+                <span>STATION: <strong>STUDIO-PHC004</strong></span>
+                <span>EMBEDDING: <strong style="color: #38bdf8;">128-D VECTOR</strong></span>
+              </div>
+
+              <div class="hud-bottom-telemetry" id="enroll-status-text">
+                Center face in circle and choose enrollment action below
+              </div>
+            </div>
+
+            <div style="margin-top: 0.75rem; background: var(--bg-surface-subtle); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 0.6rem;">
+              <input type="checkbox" id="enroll-consent-check" checked style="transform: scale(1.15); cursor: pointer;">
+              <label for="enroll-consent-check" style="font-size: 0.76rem; color: var(--text-main); cursor: pointer; margin: 0;">
+                <strong>Step 1 & 2 Informed Consent:</strong> Staff member consents to capture photo & store 512-D ArcFace numerical embedding.
+              </label>
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; margin-top: 0.75rem; flex-wrap: wrap;">
+              <label class="btn btn-outline btn-sm" style="margin: 0; cursor: pointer;">
+                <span>📁 Upload Staff Image</span>
+                <input type="file" id="enroll-file-input" accept="image/*" style="display: none;" onchange="app.handleImageFileUpload(event)">
+              </label>
+              <button id="btn-enroll-unique" class="btn btn-primary" style="flex: 1;"
+                onclick="app.handleEnrollFace(false)">
+                Step 3-5: Run OpenCV & ArcFace Enroll
+              </button>
+              <button id="btn-enroll-duplicate" class="btn btn-warning" style="flex: 1;"
+                onclick="app.handleEnrollFace(true)">
+                Test Anti-Duplication
+              </button>
+            </div>
+
+            <div id="enroll-result-box"
+              style="margin-top: 1rem; padding: 0.9rem; border-radius: var(--radius-md); background: var(--bg-surface-subtle); border: 1px solid var(--border-subtle); display: none;">
+              <div id="enroll-result-headline" style="font-weight: 800; font-size: 0.95rem;"></div>
+              <div id="enroll-result-message"
+                style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.45;"></div>
+            </div>
+          </div>
+
+          <!-- Right: Staff Selector & Guarantees -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">Staff Member to Enroll</div>
+                  <div class="card-subtitle">Select staff profile for facial registration</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Select Staff Member:</label>
+                <select id="enroll-staff-select" class="form-control"
+                  onchange="app.handleEnrollStaffSelect(this.value)">
+                  <!-- Populated by app.js -->
+                </select>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.78rem;">
+                <div
+                  style="padding: 0.75rem; border-radius: var(--radius-md); background: var(--bg-surface-subtle); border-left: 3px solid var(--primary);">
+                  <strong>1. Mandatory Registration:</strong> Staff cannot check in without an enrolled face vector.
+                </div>
+                <div
+                  style="padding: 0.75rem; border-radius: var(--radius-md); background: var(--bg-surface-subtle); border-left: 3px solid var(--danger);">
+                  <strong>2. Anti-Duplication Collision (Cosine ≥ 0.82):</strong> The same face cannot be registered for
+                  multiple accounts (prevents ghost workers).
+                </div>
+                <div
+                  style="padding: 0.75rem; border-radius: var(--radius-md); background: var(--bg-surface-subtle); border-left: 3px solid var(--secondary);">
+                  <strong>3. DPDP Act 2023 Compliant:</strong> Zero raw photo storage; only irreversible 128-d floating
+                  point embeddings retained.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Biometric Directory Table -->
+        <div class="card" style="margin-top: 1.5rem;">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Staff Biometric Registry Directory</div>
+              <div class="card-subtitle">Enrollment status of all 10 clinic personnel</div>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="opsense-table">
+              <thead>
+                <tr>
+                  <th>Staff Member</th>
+                  <th>Role & Dept</th>
+                  <th>Biometric Status</th>
+                  <th>Vector Type</th>
+                  <th>Registration Date</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="face-registry-table-body">
+                <!-- Populated by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Append-Only Immutable Attendance Event Ledger -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Append-Only Immutable Attendance Ledger</div>
+            <div class="card-subtitle">Permanent cryptographic log • Events cannot be modified or deleted</div>
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="app.openCorrectionModal()">
+            Request Correction
+          </button>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="opsense-table">
+            <thead>
+              <tr>
+                <th>Event ID</th>
+                <th>Staff Name</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Method</th>
+                <th>Proxy Risk</th>
+                <th>Sync Status</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="attendance-ledger-body">
+              <!-- Populated by app.js from IndexedDB -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ====================================================================
+         VIEW 3: STAFF & SCHEDULE
+         ==================================================================== -->
+    <div id="view-staff" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Comprehensive Staff Roster & IPHS Reserve</div>
+            <div class="card-subtitle">Full personnel directory, working hours, and qualification mapping</div>
+          </div>
+          <div style="display: flex; gap: 0.4rem;">
+            <button class="btn btn-outline btn-sm active" onclick="app.filterStaffRoster('all')">All</button>
+            <button class="btn btn-outline btn-sm" onclick="app.filterStaffRoster('doctors')">Doctors</button>
+            <button class="btn btn-outline btn-sm" onclick="app.filterStaffRoster('nurses')">Nurses & ANMs</button>
+            <button class="btn btn-outline btn-sm" onclick="app.filterStaffRoster('reserve')">IPHS 15% Reserve</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="opsense-table">
+            <thead>
+              <tr>
+                <th>Staff Name</th>
+                <th>Role & Dept</th>
+                <th>Shift Hours</th>
+                <th>Attendance</th>
+                <th>Qualified Services</th>
+                <th>Workload</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="full-staff-roster-body">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 4: SERVICES
+         ==================================================================== -->
+    <div id="view-services" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Clinical Rooms & Service Availability Directory</div>
+            <div class="card-subtitle">Mandatory IPHS service thresholds and live staff coverage</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem;"
+          id="services-detailed-grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 5: ALERTS STREAM
+         ==================================================================== -->
+    <div id="view-alerts" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Operational Alerts & Incident Stream</div>
+            <div class="card-subtitle">Complete log of staffing gaps, delayed check-ins, and resolution actions</div>
+          </div>
+        </div>
+
+        <div id="alerts-full-history-feed" class="alerts-feed-container">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 6: LEAVE MANAGEMENT
+         ==================================================================== -->
+    <div id="view-leave" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Sanctioned Leave & Continuity Management</div>
+            <div class="card-subtitle">Approved absence tracking and IPHS 15% reserve pool deployment</div>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="opsense-table">
+            <thead>
+              <tr>
+                <th>Staff Name</th>
+                <th>Leave Type</th>
+                <th>Dates</th>
+                <th>Status</th>
+                <th>Substitute Staff</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="leave-table-body">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 7: ANALYTICS (PURPOSEFUL, SEPARATE PAGE - NOT ON MAIN DASHBOARD)
+         ==================================================================== -->
+    <div id="view-analytics" class="tab-view">
+      <div style="margin-bottom: 1.25rem;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">Clinic Operational Analytics</h2>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Useful operational trends without cluttering the primary
+          dashboard.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+        <div class="card">
+          <div class="card-title">Absenteeism Rate (Last 30 Days)</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin: 0.5rem 0;">4.2%</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">IPHS Rural Average: 6.5% • Below regional threshold
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Average Check-In Delay</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--warning); margin: 0.5rem 0;">5.4 mins</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">Within 15-minute standard grace window</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Clinical Service Availability Ratio</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--success); margin: 0.5rem 0;">98.6%</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">Continuity options successfully prevented room
+            closures</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Average Alert Resolution Time</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0;">8.2 mins</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">From gap detection to substitute authorization
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 8: DISTRICT FLEET
+         ==================================================================== -->
+    <div id="view-district" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">District PHC Fleet Overview</div>
+            <div class="card-subtitle">Regional health officer oversight across cluster facilities</div>
+          </div>
+        </div>
+        <div id="district-fleet-container"
+          style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem;">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 9: SETTINGS
+         ==================================================================== -->
+    <div id="view-settings" class="tab-view">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Facility Configuration & System Settings</div>
+            <div class="card-subtitle">Hardware endpoints, offline database reset, and data export</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px;">
+          <div class="form-group">
+            <label>Facility Name:</label>
+            <input type="text" class="form-control" value="PHC Shirwal (Pune Rural Health Circle)" readonly>
+          </div>
+          <div class="form-group">
+            <label>IPHS 15% Reserve Requirement:</label>
+            <input type="text" class="form-control" value="Enabled (2 Reserve Staff Assigned)" readonly>
+          </div>
+          <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+            <button class="btn btn-outline" onclick="app.exportAuditLog()">Export Immutable Audit Log (CSV)</button>
+            <button class="btn btn-danger" onclick="app.resetOfflineStorage()">Reset Local IndexedDB</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  </div> <!-- /app-view-container -->
+
+  <!-- ====================================================================
+       MODAL 1: ALERT DETAIL DRAWER / MODAL
+       Answers: WHAT happened? WHY did it happen? IMPACT? ACTION available?
+       ==================================================================== -->
+  <div id="modal-alert-detail" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="alert-modal-title">Alert Details</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);" id="alert-modal-timestamp">Timestamp: --</div>
+        </div>
+        <button class="modal-close-btn" onclick="app.closeAlertModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <span id="alert-modal-severity-badge" class="alert-pill critical">CRITICAL ALERT</span>
+        </div>
+
+        <div class="diag-field">
+          <span class="diag-label" data-i18n="what_happened">WHAT HAPPENED</span>
+          <div class="diag-val" id="alert-modal-what" style="font-size: 0.92rem;">--</div>
+        </div>
+
+        <div class="diag-field">
+          <span class="diag-label" data-i18n="why_happened">WHY IT HAPPENED</span>
+          <div class="diag-val" id="alert-modal-why">--</div>
+        </div>
+
+        <div class="diag-field">
+          <span class="diag-label" data-i18n="operational_impact">OPERATIONAL IMPACT</span>
+          <div class="diag-val" id="alert-modal-impact" style="color: var(--danger);">--</div>
+        </div>
+
+        <div class="diag-field" id="alert-modal-coverage-box">
+          <span class="diag-label" data-i18n="coverage_options">AVAILABLE COVERAGE</span>
+          <div class="diag-val" id="alert-modal-coverage">--</div>
+        </div>
+
+        <div class="diag-field">
+          <span class="diag-label" data-i18n="recommended_action">RECOMMENDED ACTION</span>
+          <div class="diag-val" id="alert-modal-action" style="color: var(--primary);">--</div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-outline" onclick="app.closeAlertModal()">Close</button>
+        <button class="btn btn-outline" id="btn-alert-dismiss" onclick="app.dismissCurrentAlert()">Dismiss with
+          Reason</button>
+        <button class="btn btn-warning" id="btn-alert-escalate" onclick="app.escalateCurrentAlert()">Escalate</button>
+        <button class="btn btn-primary" id="btn-alert-assign" onclick="app.openReplacementModalForAlert()">Assign
+          Replacement</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 2: STAFF REPLACEMENT COVERAGE
+       System checks qualification, workload, availability. Never auto-forces overtime.
+       ==================================================================== -->
+  <div id="modal-staff-replacement" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Staff Replacement & Coverage Authorization</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">IPHS 2022 Continuity Rule Engine</div>
+        </div>
+        <button class="modal-close-btn" onclick="app.closeReplacementModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div
+          style="background: var(--bg-surface-subtle); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <strong style="color: var(--text-main); font-size: 0.84rem;">Unavailable Staff:</strong>
+          <div id="repl-modal-unavailable-staff" style="font-size: 0.82rem; margin-top: 2px;">Dr. Rajesh Kulkarni
+            (Emergency & Trauma Care)</div>
+          <div id="repl-modal-reason" style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">Reason:
+            Delayed Check-in (>15 mins without notice)</div>
+        </div>
+
+        <div>
+          <strong style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">System Verification
+            Checks:</strong>
+          <ul
+            style="list-style: none; margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.78rem;">
+            <li>&bull; <strong>Clinical Qualification:</strong> Medical Officer (MBBS) required</li>
+            <li>&bull; <strong>Role Authority:</strong> Emergency stabilization authorized</li>
+            <li>&bull; <strong>Current Workload:</strong> 4.0 hours scheduled (Compliant with IPHS 8h cap)</li>
+            <li>&bull; <strong>Leave Status:</strong> Active on-call reserve</li>
+          </ul>
+        </div>
+
+        <div class="form-group" style="margin-top: 0.5rem;">
+          <label>Select Recommended Replacement Staff:</label>
+          <select id="repl-staff-select" class="form-control">
+            <option value="STF-007">Dr. Rahul Mehra (DOCTOR • Emergency Relief Pool • Workload: Low)</option>
+            <option value="STF-008">Dr. Sneha Kulkarni (DOCTOR • Inpatient Ward • Workload: Moderate)</option>
+          </select>
+        </div>
+
+        <!-- Overtime approval alert -->
+        <div
+          style="background: var(--warning-bg); border: 1px solid var(--warning-border); padding: 0.75rem; border-radius: var(--radius-md); font-size: 0.76rem; color: var(--warning-text);">
+          <strong>Overtime Authorization Notice:</strong> If this coverage extends beyond normal shift hours (+2
+          hours), human Medical Officer approval is mandatory. AI never automatically mandates overtime.
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-outline" onclick="app.closeReplacementModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="app.confirmStaffReplacement()">Authorize Assignment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 3: ATTENDANCE CORRECTION REQUEST
+       Append-only audit trail: original record is never mutated or erased.
+       ==================================================================== -->
+  <div id="modal-attendance-correction" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" data-i18n="correction_modal_title">Request Attendance Correction</div>
+          <div style="font-size: 0.74rem; color: var(--text-muted);">Append-Only Audit Trail (DPDP Act 2023)</div>
+        </div>
+        <button class="modal-close-btn" onclick="app.closeCorrectionModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div
+          style="font-size: 0.78rem; color: var(--text-muted); background: var(--bg-surface-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <strong>Immutable Ledger Guarantee:</strong> The original attendance timestamp and biometric verification
+          hash remain permanently in the audit trail. Corrections are appended as reviewed administrative events.
+        </div>
+
+        <div class="form-group">
+          <label>Select Staff Member:</label>
+          <select id="corr-staff-select" class="form-control">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Correction Type:</label>
+          <select id="corr-type-select" class="form-control">
+            <option value="CAMERA_LIGHTING_ERROR">Camera Glare / Lighting Hardware Error</option>
+            <option value="OFFICIAL_FIELD_DUTY">Official Field Duty / Immunization Outreach</option>
+            <option value="EMERGENCY_OB_CALL">Emergency Obstetric On-Call Arrival</option>
+            <option value="LATE_ARRIVAL_APPROVED">Late Arrival with Sanctioned Permission</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Justification & Reason (Mandatory for audit trail):</label>
+          <textarea id="corr-reason-text" class="form-control" rows="3"
+            placeholder="Enter reason and supervisory approval reference..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-outline" onclick="app.closeCorrectionModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="app.submitCorrectionRequest()">Submit Correction Request</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts with cache busters -->
+  <script src="js/i18n.js?v=synvara_3.0"></script>
+  <script src="js/storage.js?v=synvara_3.0"></script>
+  <script src="js/edge_ai.js?v=synvara_3.0"></script>
+  <script src="js/rule_engine.js?v=synvara_3.0"></script>
+  <script src="js/alert_fusion.js?v=synvara_3.0"></script>
+  <script src="js/sync_client.js?v=synvara_3.0"></script>
+  <script src="js/scenario.js?v=synvara_3.0"></script>
+  <script src="js/app.js?v=synvara_3.0"></script>
+
+</body>
+
+</html>

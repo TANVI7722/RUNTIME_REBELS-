@@ -1,0 +1,26 @@
+{
+  "name": "synvara-phc-edge-ai",
+  "version": "1.0.0",
+  "description": "SYNVARA — Intelligent Operational Monitoring & Local Edge AI for Primary Healthcare",
+  "scripts": {
+    "start": "python server.py",
+    "dev": "python server.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TANVI7722/RUNTIME_REBELS.git"
+  },
+  "homepage": "https://github.com/TANVI7722/RUNTIME_REBELS#readme",
+  "keywords": [
+    "edge-ai",
+    "healthcare",
+    "phc",
+    "isolation-forest",
+    "offline-first",
+    "indexeddb",
+    "iphs-2022",
+    "dpdp-act"
+  ],
+  "author": "Team RUNTIME REBELS",
+  "license": "MIT"
+}
